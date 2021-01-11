@@ -14,11 +14,11 @@ namespace Lernen_01
         Double Einzelplatzbreite;
         Double Einzelplatzlaenge;
         // Dies ist eine Liste, welche Werte vom Typ Auto, also unser eigenen Klasse, speichert
-        List<Auto> GeparkteAutos;
+        List<Fahrzeug> GeparkteAutos;
 
         //im Folgenden sind die Methoden dieser Klasse festgelegt
         // diese Methode ist durch public von außen zugreifbar, hat den Rückgabewert bool (kann also true oder false annehmen), den Namen "parken" und bekommt einen Wert übergeben, die Variable "auto" vom Typ "Auto"
-        public bool parken(Auto auto)
+        public bool parken(Fahrzeug auto) 
         {
             // dies ist eine IF-Abfrage. Wenn die Bedingung in den Klammern erfüllt ist, wird der if-Zweig ausgeführt, wenn die Bedingung nicht erfüllt ist, wird der else-Zweig ausgeführt
             if (FreienParkplaetze >= 1)
@@ -66,10 +66,17 @@ namespace Lernen_01
         public Parkplatz()
         {
             // Listen Attribute müssen IMMER initialisiert werden, sonst wird eine NullReferenceException geworfen
-            GeparkteAutos = new List<Auto>();
+            GeparkteAutos = new List<Fahrzeug>();
             // Initialisiert die Werte
-            AnzahlParkplaetze = 2;
-            FreienParkplaetze = 2;
+            AnzahlParkplaetze = 20;
+            FreienParkplaetze = 20;
+        }
+
+        public Parkplatz(int alleParkplaetze)
+        {
+            GeparkteAutos = new List<Fahrzeug>();
+            AnzahlParkplaetze = alleParkplaetze;
+            FreienParkplaetze = alleParkplaetze;
         }
 
     }

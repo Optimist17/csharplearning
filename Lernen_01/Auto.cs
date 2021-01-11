@@ -6,7 +6,7 @@ using System.Text;
 namespace Lernen_01
 {
     // diese Klasse heißt "Auto"
-    public class Auto
+    public class Auto : Fahrzeug
     {
         // Ideen für mögliche Attribute und Methoden:
         // Farbe, Länge, Breite, Geschwindigkeit, Gewicht, Name
@@ -20,7 +20,7 @@ namespace Lernen_01
         Double Gewicht;
         //Typ String bedeutet, dass die Variable eine Zeichenkette ist, wie "Hallo"
         // public bedeutet, dass auf die Variable von außerhalb der Klasse zugegriffen werden kann, während auf die anderen Variablen nicht zugegriffen werden kann
-        public String Name;
+        //public String Name;
         // Typ Farbe bedeutet, dass die Variable Werte aus dem enum "Farbe" annehmen kann. Auf diese Variable kann auch von außerhalb zugegriffen werden
         public Farbe Autofarbe;
 
@@ -41,6 +41,16 @@ namespace Lernen_01
             Geschwindigkeit = 0;
             Gewicht = 1.3;
             Name = "leer";
+            Autofarbe = Farbe.Gelb;
+        }
+
+        public Auto(String name)
+        {
+            Laenge = 4;
+            Breite = 2.5;
+            Geschwindigkeit = 0;
+            Gewicht = 1.3;
+            Name = name;
             Autofarbe = Farbe.Gelb;
         }
 

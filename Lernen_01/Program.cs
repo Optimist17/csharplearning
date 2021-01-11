@@ -27,7 +27,7 @@ namespace Lernen_01
             Auto zweitesAuto = new Auto(3.5,2.1,0.9,0,Farbe.Gruen,"TollesAuto");
 
             // eine neue Variable "unserParkplatz" unserer selbst erstellten Klasse "Parkplatz" wird erstellt und initialisiert
-            Parkplatz unserParkplatz = new Parkplatz();
+            Parkplatz unserParkplatz = new Parkplatz(20);
             // Variable "zweitesAuto" wird der Methode "parken" der Klasse "Auto" der vorher erstellten Variable "unserParkplatz" übergeben. Die Methode gibt eine Meldung zurück, ob parken erfolgreich war
             bool parkenErfolgreich = unserParkplatz.parken(zweitesAuto);
             // gibt die Erfolgsmeldung aus
@@ -38,6 +38,20 @@ namespace Lernen_01
             // gibt den neuen Wert von "parkenErfolgreich" aus
             Console.WriteLine("Parken erfolgreich: " + parkenErfolgreich);
 
+            for (int i = 0; i < 10; i++)
+            {
+                Auto einAuto = new Auto("Neues Auto " + i); // "Neues Auto 1"
+                bool erfolg = unserParkplatz.parken(einAuto);
+
+                if (!erfolg) break;
+            }
+
+            //int j = 0;
+            //while (j<10)
+            //{
+            //    j++;
+            //}
+
             // ruft die Methode "getAutonamen" unserer Variable "unserParkplatz" auf, welche eine Liste der geparkten Autos zurückgibt und in der Variablen "autonamen" speichert. "List<String> bedeutet, das die Klasse der Variable eine Liste ist, in der Werte vom Typ String gespeichert werden können
             List<String> autonamen = unserParkplatz.getAutonamen();
 
@@ -47,6 +61,10 @@ namespace Lernen_01
                 // gibt die jeweilige Variable in der Konsole aus
                 Console.WriteLine(item);
             }
+
+            Motorrad meinMotorrad = new Motorrad();
+
+            unserParkplatz.parken(meinMotorrad);
         }
     }
 }
