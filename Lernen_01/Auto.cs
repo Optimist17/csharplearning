@@ -5,7 +5,7 @@ using System.Text;
 // gleicher Namensraum wie die Klasse "Program", deswegen muss in "Program" diese Klasse nicht mit einem using eingebunden werden
 namespace Lernen_01
 {
-    // diese Klasse heißt "Auto"
+    // diese Klasse heißt "Auto", erbt die Eigenschaften und die Methoden der Klasse Fahrzeug
     public class Auto : Fahrzeug
     {
         // Ideen für mögliche Attribute und Methoden:
@@ -44,6 +44,7 @@ namespace Lernen_01
             Autofarbe = Farbe.Gelb;
         }
 
+        // Konstruktor, wo alle Werte außer der Name des Autos gleich bleiben
         public Auto(String name)
         {
             Laenge = 4;

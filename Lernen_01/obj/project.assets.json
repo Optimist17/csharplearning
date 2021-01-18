@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Projekte\\csharp_kurs\\Test\\Lernen_01\\Lernen_01.csproj",
+      "projectUniqueName": "H:\\Projekte\\csharp_kurs\\Lernen_02\\Lernen_01\\Lernen_01.csproj",
       "projectName": "Lernen_01",
-      "projectPath": "H:\\Projekte\\csharp_kurs\\Test\\Lernen_01\\Lernen_01.csproj",
+      "projectPath": "H:\\Projekte\\csharp_kurs\\Lernen_02\\Lernen_01\\Lernen_01.csproj",
       "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-      "outputPath": "H:\\Projekte\\csharp_kurs\\Test\\Lernen_01\\obj\\",
+      "outputPath": "H:\\Projekte\\csharp_kurs\\Lernen_02\\Lernen_01\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config",

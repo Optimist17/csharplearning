@@ -13,19 +13,19 @@ namespace Lernen_01
         Int32 FreienParkplaetze;
         Double Einzelplatzbreite;
         Double Einzelplatzlaenge;
-        // Dies ist eine Liste, welche Werte vom Typ Auto, also unser eigenen Klasse, speichert
+        // Dies ist eine Liste, welche Werte vom Typ Fahrzeug, speichert
         List<Fahrzeug> GeparkteAutos;
 
         //im Folgenden sind die Methoden dieser Klasse festgelegt
-        // diese Methode ist durch public von außen zugreifbar, hat den Rückgabewert bool (kann also true oder false annehmen), den Namen "parken" und bekommt einen Wert übergeben, die Variable "auto" vom Typ "Auto"
-        public bool parken(Fahrzeug auto) 
+        // diese Methode ist durch public von außen zugreifbar, hat den Rückgabewert bool (kann also true oder false annehmen), den Namen "parken" und bekommt einen Wert übergeben, die Variable "fahrzeug" vom Typ "Fahrzeug"
+        public bool parken(Fahrzeug fahrzeug) 
         {
             // dies ist eine IF-Abfrage. Wenn die Bedingung in den Klammern erfüllt ist, wird der if-Zweig ausgeführt, wenn die Bedingung nicht erfüllt ist, wird der else-Zweig ausgeführt
             if (FreienParkplaetze >= 1)
             {
-                // wenn freie Parkplätze verfügbar sind, wird das Auto geparkt.
-                // die übergebene Variable "auto" wird der Liste "GeparkteAutos" mit der Methode "Add()" hinzugefügt.
-                GeparkteAutos.Add(auto);
+                // wenn freie Parkplätze verfügbar sind, wird das Fahrzeug geparkt.
+                // die übergebene Variable "fahrzeug" wird der Liste "GeparkteAutos" mit der Methode "Add()" hinzugefügt.
+                GeparkteAutos.Add(fahrzeug);
                 // die Anzahl der FreienParkplaetze wird um 1 reduziert
                 FreienParkplaetze--;
             }
@@ -72,6 +72,7 @@ namespace Lernen_01
             FreienParkplaetze = 20;
         }
 
+        // Konstruktor, wo beim Initialisieren der Klasse schon die Anzahl der Parkplätze übergeben wird
         public Parkplatz(int alleParkplaetze)
         {
             GeparkteAutos = new List<Fahrzeug>();

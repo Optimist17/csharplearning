@@ -38,11 +38,15 @@ namespace Lernen_01
             // gibt den neuen Wert von "parkenErfolgreich" aus
             Console.WriteLine("Parken erfolgreich: " + parkenErfolgreich);
 
+            // versucht auf dem Parkplatz 10 Autos zu parken. Sobald dies nicht mehr möglich ist, da der Parkplatz voll ist, wird die Schleife abgebrochen
+            // Schleife legt Laufvariable i an, welche bei jedem Schleifendurchlauf mit i++ um 1 erhöht wird, solange i < 10 ist, sonst wird die Schleife abgebrochen
             for (int i = 0; i < 10; i++)
             {
+                // es wird ein neues Auto erzeugt, welches den Namen "Neues Auto i" hat, wobei i der jeweilige Wert von i in dem jeweiligen Schleifendurchlauf ist.
                 Auto einAuto = new Auto("Neues Auto " + i); // "Neues Auto 1"
                 bool erfolg = unserParkplatz.parken(einAuto);
 
+                // verkürzte Schreibweise für: wenn parken nicht erfolgreich war, dann wird die Schleife abgebrochen
                 if (!erfolg) break;
             }
 
@@ -62,8 +66,10 @@ namespace Lernen_01
                 Console.WriteLine(item);
             }
 
+            // Erstellung eines Motorrads
             Motorrad meinMotorrad = new Motorrad();
 
+            // Da Motorrad wie Auto von Fahrzeug erbt, kann dieses auch dem Parkplatz hinzugefügt werden
             unserParkplatz.parken(meinMotorrad);
         }
     }
